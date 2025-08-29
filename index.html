@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rineesh Thapa | Full‑Stack Learning Portfolio</title>
+  <meta name="description" content="Portfolio by Rineesh Thapa showcasing understanding of Full‑Stack Development, HTML, CSS, Bootstrap and JavaScript with interactive demos." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Your Styles -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <span class="brand-gradient">Rineesh Thapa</span> <span class="text-secondary">| Student</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#fullstack">Full‑Stack</a></li>
+          <li class="nav-item"><a class="nav-link" href="#html">HTML</a></li>
+          <li class="nav-item"><a class="nav-link" href="#css">CSS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bootstrap">Bootstrap</a></li>
+          <li class="nav-item"><a class="nav-link" href="#javascript">JavaScript</a></li>
+          <li class="nav-item ms-lg-3">
+            <button id="themeToggle" class="btn btn-sm btn-outline-secondary">
+              <i class="bi bi-moon-stars"></i> Theme
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="container my-4">
+    <div class="hero p-4 p-md-5 shadow-soft reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-md-8">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="avatar">RT</div>
+            <div>
+              <div class="pill"><i class="bi bi-code-slash"></i> Learning Full‑Stack Development</div>
+            </div>
+          </div>
+          <h1 class="display-5 fw-bold mb-3">
+            Hi, I'm <span class="brand-gradient">Rineesh Thapa</span>.
+          </h1>
+          <p class="lead text-secondary mb-4">
+            This portfolio showcases my understanding of Full‑Stack Development fundamentals with hands‑on demos in HTML, CSS, Bootstrap, and JavaScript.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#fullstack" class="btn btn-accent">Explore My Demos</a>
+            <a href="#contact" class="btn btn-outline-secondary">Contact</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <small class="text-secondary">Built with HTML, CSS, Bootstrap 5, and Vanilla JS.</small>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- FULL STACK -->
+    <section id="fullstack" class="section">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-2 reveal">What is Full‑Stack Development?</h2>
+            <p class="text-secondary reveal">
+              Full‑stack development covers both the client side (front‑end) and the server side (back‑end) of web applications, plus data storage. A full‑stack developer understands how these pieces connect to deliver a complete feature.
+            </p>
+            <ul class="text-secondary reveal">
+              <li>Front‑End: UI built with HTML, CSS, JavaScript (runs in the browser).</li>
+              <li>Back‑End: Server logic, APIs, authentication (Node.js/Express, etc.).</li>
+              <li>Database: Persistent storage (PostgreSQL, MongoDB, etc.).</li>
+              <li>DevOps/Tooling: Version control, deployment, CI/CD, monitoring.</li>
+            </ul>
+
+            <div class="card card-glass shadow-soft p-3 mt-3 reveal">
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>Request Flow Demo</strong>
+                <div class="d-flex gap-2">
+                  <button id="simulateFlow" class="btn btn-sm btn-accent">
+                    <i class="bi bi-play-fill"></i> Simulate
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary code-toggle"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flowSnippet"
+                    aria-expanded="false"
+                    aria-controls="flowSnippet"
+                    data-show-text="Show log"
+                    data-hide-text="Hide log">
+                    <i class="bi bi-chevron-down"></i> Show log
+                  </button>
+                </div>
+              </div>
+
+              <div class="stepper mt-3">
+                <div class="step" data-step="1">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="badge"><i class="bi bi-window-stack"></i></div>
+                    <strong>Client</strong>
+                  </div>
+                  <small class="text-secondary">Browser sends a GET request.</small>
+                </div>
+                <div class="step" data-step="2">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="badge"><i class="bi bi-hdd-network"></i></div>
+                    <strong>Server</strong>
+                  </div>
+                  <small class="text-secondary">API handles logic and validation.</small>
+                </div>
+                <div class="step" data-step="3">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="badge"><i class="bi bi-database"></i></div>
+                    <strong>Database</strong>
+                  </div>
+                  <small class="text-secondary">Query/CRUD and send response back.</small>
+                </div>
+              </div>
+
+              <div id="flowSnippet" class="collapse mt-2">
+                <pre class="mt-3">
+                  <button class="copy-btn" data-target="flowLog">Copy</button>
+                  <code id="flowLog">// Click “Simulate” to see a simplified request lifecycle here...</code>
+                </pre>
+              </div>
+
+              <small class="text-secondary">
+                Explanation: The client (browser) calls an API route. The server checks permissions and fetches data from the database. Finally, the server returns JSON to the client to render on the page.
+              </small>
+            </div>
+          </div>
+
+          <div class="col-lg-6 reveal">
+            <div class="card card-glass shadow-soft p-4">
+              <h5 class="mb-3">Conceptual Stack</h5>
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="p-3 rounded border">
+                    <strong>Front‑End:</strong> HTML, CSS, JavaScript
+                    <div class="text-secondary small">UI, accessibility, responsiveness.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="p-3 rounded border">
+                    <strong>Back‑End:</strong> Node.js, Express (example)
+                    <div class="text-secondary small">Routing, business logic, security.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="p-3 rounded border">
+                    <strong>Database:</strong> PostgreSQL/MongoDB (example)
+                    <div class="text-secondary small">Data modeling, indexes, transactions.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3 small text-secondary">
+                Tools that help: Git/GitHub, Postman, Docker, CI/CD, Cloud services.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HTML -->
+    <section id="html" class="section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <h2 class="fw-bold mb-2 reveal">HTML</h2>
+            <p class="text-secondary reveal">
+              HTML gives the structure and meaning (semantics) to a page. Proper tags improve accessibility, SEO, and developer readability.
+            </p>
+            <ul class="text-secondary reveal">
+              <li>Use semantic tags like header, nav, main, article, section, footer.</li>
+              <li>Always set alt text for images and label form controls.</li>
+              <li>Use headings in order (h1 → h2 → h3) to build content hierarchy.</li>
+            </ul>
+          </div>
+          <div class="col-lg-7 reveal">
+            <div class="card card-glass shadow-soft">
+              <div class="card-body">
+                <div class="pill mb-2"><i class="bi bi-journal-text"></i> Demo: Semantic Article Card</div>
+
+                <!-- Toggle + collapse for HTML snippet -->
+                <button type="button"
+                        class="btn btn-outline-secondary btn-sm code-toggle"
+                        data-bs-toggle="collapse" data-bs-target="#htmlSnippet"
+                        aria-expanded="false" aria-controls="htmlSnippet"
+                        data-show-text="Show code" data-hide-text="Hide code">
+                  <i class="bi bi-chevron-down"></i> Show code
+                </button>
+
+                <div id="htmlSnippet" class="collapse mt-2">
+                  <pre class="mt-3">
+                    <button class="copy-btn" data-target="htmlCode">Copy</button>
+                    <code id="htmlCode">&lt;article aria-labelledby="post-title"&gt;
+  &lt;header&gt;
+    &lt;h3 id="post-title"&gt;Why Semantics Matter&lt;/h3&gt;
+    &lt;time datetime="2025-08-01"&gt;Aug 1, 2025&lt;/time&gt;
+  &lt;/header&gt;
+  &lt;figure&gt;
+    &lt;img src="hero.jpg" alt="Code editor with HTML structure on the screen"&gt;
+    &lt;figcaption&gt;Good semantics help screen readers and SEO.&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;Semantic HTML improves accessibility...&lt;/p&gt;
+  &lt;footer&gt;Written by &lt;strong&gt;Rineesh Thapa&lt;/strong&gt;&lt;/footer&gt;
+&lt;/article&gt;</code>
+                  </pre>
+                </div>
+
+                <article aria-labelledby="post-title">
+                  <header class="mb-2">
+                    <h3 id="post-title" class="mb-1">Why Semantics Matter</h3>
+                    <time datetime="2025-08-01" class="text-secondary small">Aug 1, 2025</time>
+                  </header>
+                  <figure class="mb-2">
+                    <img class="img-fluid rounded" src="../Portfolio/full.jpg" alt="Code editor with HTML structure on the screen">
+                    <figcaption class="small text-secondary mt-1">Good semantics help screen readers and search engines.</figcaption>
+                  </figure>
+                  <p class="mb-2">Semantic HTML improves accessibility and understanding by both humans and machines.
+                    It also reduces the need for extra ARIA attributes by using the right element for the job.</p>
+                  <footer class="text-secondary small">Written by <strong>Rineesh Thapa</strong></footer>
+                </article>
+
+                <small class="text-secondary d-block mt-3">
+                  Explanation: article wraps a standalone piece of content. header groups the title and date. figure/figcaption pair the image with a description. time provides machine‑readable dates for tools.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSS -->
+    <section id="css" class="section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-2 reveal">CSS</h2>
+            <p class="text-secondary reveal">
+              CSS styles the structure. Modern CSS uses variables, flexbox/grid for layout, and transitions/animations for smooth UI.
+            </p>
+            <div class="card card-glass shadow-soft reveal">
+              <div class="card-body">
+                <div class="pill mb-2"><i class="bi bi-palette"></i> Demo: Theme Hue with CSS Variables</div>
+                <div class="swatch mb-3"></div>
+                <label for="hue" class="form-label small text-secondary">Adjust Accent Hue</label>
+                <input id="hue" type="range" min="0" max="360" value="268" />
+
+                <!-- Toggle + collapse for CSS snippet -->
+                <button type="button"
+                        class="btn btn-outline-secondary btn-sm mt-3 code-toggle"
+                        data-bs-toggle="collapse" data-bs-target="#cssSnippet"
+                        aria-expanded="false" aria-controls="cssSnippet"
+                        data-show-text="Show code" data-hide-text="Hide code">
+                  <i class="bi bi-chevron-down"></i> Show code
+                </button>
+
+                <div id="cssSnippet" class="collapse mt-2">
+                  <pre class="mt-3">
+                    <button class="copy-btn" data-target="cssCode">Copy</button>
+                    <code id="cssCode">:root{
+  --accent-hue: 268;
+  --accent: hsl(var(--accent-hue), 86%, 60%);
+}
+.button{ background: var(--accent); transition: filter .2s; }
+.button:hover{ filter: brightness(.98); }</code>
+                  </pre>
+                </div>
+
+                <small class="text-secondary d-block mt-2">
+                  Explanation: We define a reusable color via CSS variables. JavaScript only updates --accent-hue; the entire UI updates instantly without changing multiple CSS rules.
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 reveal">
+            <div class="card card-glass shadow-soft p-4">
+              <h5 class="mb-2">Layout & Micro‑Interactions</h5>
+              <ul class="text-secondary mb-3">
+                <li>Flexbox/Grid for responsive layouts.</li>
+                <li>Transitions for hover/focus affordances.</li>
+                <li>Shadows and subtle borders for depth without clutter.</li>
+              </ul>
+              <div class="d-grid gap-3">
+                <div class="p-3 rounded border">
+                  <strong>Responsive Grid (CSS Grid example)</strong>
+                  <div class="mt-2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.75rem">
+                    <div class="p-3 rounded text-center" style="border:1px solid color-mix(in oklab, var(--bs-body-color), transparent 90%);">A</div>
+                    <div class="p-3 rounded text-center" style="border:1px solid color-mix(in oklab, var(--bs-body-color), transparent 90%);">B</div>
+                    <div class="p-3 rounded text-center" style="border:1px solid color-mix(in oklab, var(--bs-body-color), transparent 90%);">C</div>
+                    <div class="p-3 rounded text-center" style="border:1px solid color-mix(in oklab, var(--bs-body-color), transparent 90%);">D</div>
+                  </div>
+                </div>
+                <div class="p-3 rounded border d-flex align-items-center justify-content-between">
+                  <div>
+                    <strong>Button Hover</strong>
+                    <div class="small text-secondary">Using transition and gradient.</div>
+                  </div>
+                  <button class="btn btn-accent">Hover Me</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </section>
+
+    <!-- BOOTSTRAP -->
+    <section id="bootstrap" class="section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <h2 class="fw-bold mb-2 reveal">Bootstrap Framework</h2>
+            <p class="text-secondary reveal">
+              Bootstrap provides responsive grid, ready‑made components, and utilities to build faster with consistent design.
+            </p>
+            <ul class="text-secondary reveal">
+              <li>Grid system: container, row, col breakpoints (col‑sm‑, col‑md‑, col‑lg‑).</li>
+              <li>Components: Navbar, Cards, Modals, Alerts, etc.</li>
+              <li>Utilities: Spacing, typography, colors, borders.</li>
+            </ul>
+          </div>
+          <div class="col-lg-7 reveal">
+            <div class="card card-glass shadow-soft">
+              <div class="card-body">
+                <div class="pill mb-2"><i class="bi bi-grid"></i> Demo: Responsive Cards + Modal</div>
+
+                <!-- Toggle + collapse for Bootstrap snippet -->
+                <button type="button"
+                        class="btn btn-outline-secondary btn-sm code-toggle"
+                        data-bs-toggle="collapse" data-bs-target="#bsSnippet"
+                        aria-expanded="false" aria-controls="bsSnippet"
+                        data-show-text="Show code" data-hide-text="Hide code">
+                  <i class="bi bi-chevron-down"></i> Show code
+                </button>
+
+                <div class="row g-3 mt-2">
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <h5 class="card-title">Card One</h5>
+                        <p class="card-text text-secondary">This card sits inside Bootstrap’s grid.</p>
+                        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#demoModal">Open Modal</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <h5 class="card-title">Card Two</h5>
+                        <p class="card-text text-secondary">Responsive by changing column classes.</p>
+                        <a href="#javascript" class="btn btn-outline-secondary">Go to JS</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <h5 class="card-title">Card Three</h5>
+                        <p class="card-text text-secondary">Utility classes for spacing and borders.</p>
+                        <a href="#css" class="btn btn-outline-secondary">See CSS</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Snippet collapse content -->
+                <div id="bsSnippet" class="collapse mt-2">
+                  <pre class="mt-3">
+                    <button class="copy-btn" data-target="bsCode">Copy</button>
+                    <code id="bsCode">&lt;div class="row g-3"&gt;
+  &lt;div class="col-12 col-md-6 col-xl-4"&gt;...&lt;/div&gt;
+  &lt;div class="col-12 col-md-6 col-xl-4"&gt;...&lt;/div&gt;
+  &lt;div class="col-12 col-md-6 col-xl-4"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;button data-bs-toggle="modal" data-bs-target="#demoModal"&gt;Open Modal&lt;/button&gt;</code>
+                  </pre>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Bootstrap Modal</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Modals are great for confirming actions or showing details without navigating away.
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-accent">Confirm</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <small class="text-secondary d-block mt-3">
+                  Explanation: The grid adapts at md and xl breakpoints. data-bs-toggle and data-bs-target attributes activate components without writing JS.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <section id="javascript" class="section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <h2 class="fw-bold mb-2 reveal">JavaScript</h2>
+            <p class="text-secondary reveal">
+              JavaScript adds interactivity and logic: handling events, manipulating the DOM, fetching APIs, and managing state.
+            </p>
+            <ul class="text-secondary reveal">
+              <li>Events: click, input, submit to react to user actions.</li>
+              <li>DOM: querySelector, classList, createElement to modify the page.</li>
+              <li>Storage: localStorage for simple persistence in the browser.</li>
+            </ul>
+          </div>
+          <div class="col-lg-7 reveal">
+            <div class="card card-glass shadow-soft">
+              <div class="card-body">
+                <div class="pill mb-2"><i class="bi bi-check2-square"></i> Demo: Mini To‑Do (DOM + localStorage)</div>
+
+                <!-- Toggle + collapse for JS snippet -->
+                <button type="button"
+                        class="btn btn-outline-secondary btn-sm code-toggle"
+                        data-bs-toggle="collapse" data-bs-target="#jsSnippet"
+                        aria-expanded="false" aria-controls="jsSnippet"
+                        data-show-text="Show code" data-hide-text="Hide code">
+                  <i class="bi bi-chevron-down"></i> Show code
+                </button>
+
+                <div id="jsSnippet" class="collapse mt-2">
+                  <pre class="mt-3">
+                    <button class="copy-btn" data-target="jsCode">Copy</button>
+                    <code id="jsCode">// Minimal To‑Do logic
+const key = 'rt_todos';
+const listEl = document.getElementById('todoList');
+const inputEl = document.getElementById('todoInput');
+
+let todos = JSON.parse(localStorage.getItem(key) || '[]');
+
+function save(){ localStorage.setItem(key, JSON.stringify(todos)); }
+function render(){
+  listEl.innerHTML = '';
+  todos.forEach((t, i) => {
+    const item = document.createElement('div');
+    item.className = 'todo-item' + (t.done ? ' done' : '');
+    item.innerHTML = \`
+      <input type="checkbox" \${t.done ? 'checked' : ''} aria-label="Done">
+      <span>\${t.text}</span>
+      <button class="btn btn-sm btn-outline-danger" aria-label="Delete">
+        <i class="bi bi-trash"></i>
+      </button>\`;
+    // toggle
+    item.children[0].addEventListener('change', () => { t.done = !t.done; save(); render(); });
+    // delete
+    item.children[2].addEventListener('click', () => { todos.splice(i, 1); save(); render(); });
+    listEl.appendChild(item);
+  });
+}
+document.getElementById('todoForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const text = inputEl.value.trim();
+  if(!text) return;
+  todos.push({ text, done: false });
+  inputEl.value = '';
+  save(); render();
+});
+document.getElementById('clearAll').addEventListener('click', () => {
+  todos = []; save(); render();
+});
+render();</code>
+                  </pre>
+                </div>
+
+                <form id="todoForm" class="d-flex gap-2 mb-3" autocomplete="off">
+                  <input id="todoInput" class="form-control" placeholder="Add a task and press Enter..." />
+                  <button class="btn btn-accent" type="submit"><i class="bi bi-plus-lg"></i></button>
+                </form>
+                <div id="todoList" class="d-grid gap-2"></div>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <small class="text-secondary">Click a task to toggle done. Use the trash to delete.</small>
+                  <button id="clearAll" class="btn btn-sm btn-outline-secondary">Clear All</button>
+                </div>
+
+                <small class="text-secondary d-block mt-3">
+                  Explanation: We track tasks in an array, render the list, and persist it with localStorage. Event listeners toggle and delete tasks; re‑rendering keeps the UI in sync with the data.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-2 reveal">Contact</h2>
+            <p class="text-secondary reveal">Want to collaborate or have feedback on my learning journey? Feel free to reach out.</p>
+            <div class="d-flex gap-3 reveal">
+              <a class="btn btn-outline-secondary" href="mailto:rineeshthapa123@gmail.com"><i class="bi bi-envelope"></i> Email</a>
+              <a class="btn btn-outline-secondary" href="https://github.com/rineesh77" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal">
+            <div class="card card-glass shadow-soft p-4">
+              <h5 class="mb-2">About this site</h5>
+              <p class="text-secondary mb-0">
+                Built with semantic HTML, modern CSS (variables, transitions), Bootstrap 5 components, and vanilla JavaScript for interactivity. Optimized for readability and smooth UI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center">
+    <div class="container">
+      <div class="mb-2">
+        <span class="pill"><i class="bi bi-lightning-charge"></i> Built by <strong>Rineesh Thapa</strong></span>
+      </div>
+      <small class="text-secondary">© <span id="year"></span> Rineesh Thapa. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <button id="toTop" class="btn btn-accent to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Your App JS -->
+  <script src="app.js"></script>
+</body>
+</html>
